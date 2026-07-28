@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="stylesheet" href="/assets/css/claude.css">
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="nav-name" style="text-decoration:none">An RuiHe<span class="cn">安瑞和</span></a>
+        <div class="nav-links">
+          <a href="/"{% if page.nav_active == "home" %} class="active"{% endif %}>Home</a>
+          <a href="/experience/"{% if page.nav_active == "experience" %} class="active"{% endif %}>Experience</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      {% if page.show_header %}
+      <header>
+        <div class="header-top">
+          <div class="bio-row">
+            <img class="avatar" src="/images/profile.svg" alt="An RuiHe" />
+            <div>
+              <h1>An RuiHe <span class="chinese">安瑞和</span></h1>
+              <div class="header-role">MS Student · National University of Singapore</div>
+              <div class="profile-tags">
+                <span class="tag">Embodied AI</span>
+                <span class="tag">Multimodal LLM</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">3D Vision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+          <span class="contact-sep">·</span>
+          <a href="https://github.com/{{ site.author.github }}" target="_blank">GitHub</a>
+          <span class="contact-sep">·</span>
+          <a href="https://scholar.google.com/citations?user=e96NfoAAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
+        </div>
+      </header>
+      {% endif %}
+
+      {{ content }}
+
+      <footer>
+        &copy; 2026 An RuiHe &nbsp;|&nbsp; <a href="https://github.com/{{ site.author.github }}/anruihe.github.io" target="_blank">View Source</a>
+      </footer>
+
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08 }
+      );
+      document.querySelectorAll('.fade-section').forEach((el) => observer.observe(el));
+    </script>
+
+  </body>
+</html>
