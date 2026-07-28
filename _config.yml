@@ -8,7 +8,7 @@
 # Site Settings
 title: "An RuiHe (Andy)"
 description: "An RuiHe (Andy) — MS Student at NUS. Research in Embodied AI, Multimodal LLM, and 3D Vision."
-baseurl: ""
+baseurl: "/anruihe.github.io"
 url: "https://andy4evertot1.github.io"
 repository: "andy4evertot1/anruihe.github.io"
 google_scholar_stats_use_cdn: true
