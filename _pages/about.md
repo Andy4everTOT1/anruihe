@@ -10,7 +10,8 @@ excerpt: "An RuiHe (Andy) — MS Student at NUS. Research in Embodied AI, Multim
 <section id="about" class="fade-section">
   <h2>About</h2>
   <p>
-    I am an MS student at the <strong>National University of Singapore (NUS)</strong>, advised by
+    I am an MS student at the <strong>National University of Singapore (NUS)</strong>, working with
+    <a href="https://sites.google.com/view/showlab/home" target="_blank"><strong>Show Lab</strong></a> and advised by
     Prof. <a href="https://zhen720.github.io/" target="_blank">Mike Zheng Shou</a>.
     Prior to NUS, I received my B.E. in Computer Science from <strong>Zhejiang University</strong>,
     where I was advised by Prof. Juncheng Li.
